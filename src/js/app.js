@@ -14,11 +14,6 @@ import './../favicon.ico';
 
 const store = configureStore();
 
-//for development
-setTimeout(() => {
-	document.querySelector('body > script:nth-child(3)').remove();
-}, 2000);
-
 const jsx = (
 	<Provider store={store}>
 		<AppRouter />
