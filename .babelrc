@@ -1,0 +1,24 @@
+{
+	"presets": [
+		["@babel/env", {
+            "targets": {
+                "browsers": [
+                    "last 5 versions",
+                    "ie >= 8"
+                ]
+            }
+		}],
+		["@babel/react", {
+            "targets": {
+                "browsers": [
+                    "last 5 versions",
+                    "ie >= 8"
+                ]
+            }
+        }]
+	],
+	"plugins": [
+        "transform-class-properties",
+        "@babel/plugin-proposal-object-rest-spread"
+	]
+}
