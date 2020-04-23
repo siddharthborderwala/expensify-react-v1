@@ -9,11 +9,12 @@ module.exports = (env) => {
 		devtool: isProductionMode ? 'source-map' : 'inline-source-map',
 		devServer: {
 			contentBase: path.join(__dirname, 'public'),
+			publicPath: '/dist/',
 			port: 4000,
 			historyApiFallback: true,
 		},
 		output: {
-			path: path.join(__dirname, 'public'),
+			path: path.join(__dirname, 'public', 'dist'),
 			filename: 'bundle.js',
 		},
 		module: {
@@ -61,14 +62,14 @@ module.exports = (env) => {
 					test: /\.(ico)$/,
 					loader: 'file-loader',
 					options: {
-						name: './[name].[ext]',
+						name: './../[name].[ext]',
 					},
 				},
 			],
 		},
 		plugins: [
 			new HtmlWebpackPlugin({
-				filename: 'index.html',
+				filename: '../index.html',
 				template: './src/index.html',
 			}),
 			new MiniCssExtractPlugin({
