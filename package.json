@@ -5,9 +5,10 @@
 	"main": "./src/js/app.js",
 	"scripts": {
 		"start": "webpack-dev-server --host 0.0.0.0 --open",
-		"build": "webpack --mode production",
+		"build": "webpack --env production",
 		"test": "jest --config=jest.config.json --watchAll",
-		"testSingle": "jest"
+		"testSingle": "jest",
+		"serve": "live-server public"
 	},
 	"author": "Siddharth Borderwala",
 	"license": "ISC",
