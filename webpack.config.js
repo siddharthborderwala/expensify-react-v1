@@ -1,14 +1,15 @@
 const path = require('path');
+const DotEnv = require('dotenv');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
-if (process.env.NODE_ENV === 'test') {
-	require('dotenv').config({ path: '.env.test' });
-} else if (process.env.NODE_ENV === 'development') {
-	require('dotenv').config({ path: '.env.development' });
+if (process.env.NODE_ENV === 'development') {
+	DotEnv.config({ path: '.env.development' });
+} else {
+	DotEnv.config({ path: '.env.test' });
 }
 
 module.exports = (env) => {
@@ -78,7 +79,9 @@ module.exports = (env) => {
 				filename: 'styles.css',
 			}),
 			new webpack.DefinePlugin({
-				'process.env.FIREBASE_API_KEY': JSON.stringify(process.env.FIREBASE_API_KEY),
+				'process.env.FIREBASE_API_KEY': JSON.stringify(
+					process.env.FIREBASE_API_KEY
+				),
 				'process.env.FIREBASE_AUTH_DOMAIN': JSON.stringify(
 					process.env.FIREBASE_AUTH_DOMAIN
 				),
@@ -94,6 +97,12 @@ module.exports = (env) => {
 				'process.env.FIREBASE_MESSAGING_SENDER_ID': JSON.stringify(
 					process.env.FIREBASE_MESSAGING_SENDER_ID
 				),
+				'process.env.FIREBASE_APP_ID': JSON.stringify(
+					process.env.FIREBASE_APP_ID
+				),
+				'process.env.FIREBASE_MEASUREMENT_ID': JSON.stringify(
+					process.env.FIREBASE_MEASUREMENT_ID
+				)
 			}),
 		],
 	};
