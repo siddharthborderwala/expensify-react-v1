@@ -79,9 +79,7 @@ module.exports = (env) => {
 				filename: 'styles.css',
 			}),
 			new webpack.DefinePlugin({
-				'process.env.FIREBASE_API_KEY': JSON.stringify(
-					process.env.FIREBASE_API_KEY
-				),
+				'process.env.FIREBASE_API_KEY': JSON.stringify(process.env.FIREBASE_API_KEY),
 				'process.env.FIREBASE_AUTH_DOMAIN': JSON.stringify(
 					process.env.FIREBASE_AUTH_DOMAIN
 				),
@@ -97,12 +95,10 @@ module.exports = (env) => {
 				'process.env.FIREBASE_MESSAGING_SENDER_ID': JSON.stringify(
 					process.env.FIREBASE_MESSAGING_SENDER_ID
 				),
-				'process.env.FIREBASE_APP_ID': JSON.stringify(
-					process.env.FIREBASE_APP_ID
-				),
+				'process.env.FIREBASE_APP_ID': JSON.stringify(process.env.FIREBASE_APP_ID),
 				'process.env.FIREBASE_MEASUREMENT_ID': JSON.stringify(
 					process.env.FIREBASE_MEASUREMENT_ID
-				)
+				),
 			}),
 		],
 	};
