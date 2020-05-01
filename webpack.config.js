@@ -65,14 +65,21 @@ module.exports = (env) => {
 					test: /\.(ico)$/,
 					loader: 'file-loader',
 					options: {
-						name: './../[name].[ext]',
+						name: './[name].[ext]',
+					},
+				},
+				{
+					test: /\.(jpg|gif)$/,
+					loader: 'file-loader',
+					options: {
+						name: './assets/[name].[ext]',
 					},
 				},
 			],
 		},
 		plugins: [
 			new HtmlWebpackPlugin({
-				filename: '../index.html',
+				filename: './index.html',
 				template: './src/index.html',
 			}),
 			new MiniCssExtractPlugin({

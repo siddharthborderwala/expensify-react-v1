@@ -15,6 +15,8 @@ import 'normalize.css';
 import 'react-dates/lib/css/_datepicker.css';
 import './../scss/styles.scss';
 import './../favicon.ico';
+import './../assets/bg.jpg';
+import './../assets/loader.gif';
 
 const store = configureStore();
 
