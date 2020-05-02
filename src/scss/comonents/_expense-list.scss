@@ -74,3 +74,9 @@
 		}
 	}
 }
+
+.date-range-picker {
+	@media only screen and (min-width: $bp-xl) {
+		transform: scale(1.2) translate(24px, 4px);
+	}
+}
