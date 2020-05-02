@@ -8,12 +8,30 @@
 
 html {
 	font-size: 62.5%;
+
+	@media only screen and (min-width: $bp-xl) {
+		font-size: 75%;
+	}
+
+	@media only screen and (max-width: $bp-lg) {
+		font-size: 56.25%;
+	}
+
+	@media only screen and (max-width: $bp-md) {
+		font-size: 50%;
+	}
+
+	@media only screen and (max-width: $bp-sm) {
+		font-size: 43.75%;
+	}
 }
 
 body {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1.6rem;
 	box-sizing: border-box;
+	color: $color-grey;
+	line-height: 1.6;
 }
 
 button {
@@ -22,9 +40,4 @@ button {
 	&:disabled {
 		cursor: not-allowed;
 	}
-}
-
-.is-active {
-	color: red;
-	font-weight: 600;
 }

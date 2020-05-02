@@ -1,0 +1,45 @@
+.btn {
+	border: none;
+	border-radius: 3px;
+	padding: 1rem 3rem;
+	color: white;
+	background-color: $color-blue;
+	transition: all 0.4s;
+	display: inline-block;
+
+	&:focus {
+		box-shadow: 0 1rem 4rem rgba($color-blue-steel, 0.2);
+	}
+
+	&:active {
+		border-bottom: none;
+	}
+}
+
+.btn-login,
+.btn-logout {
+	margin: 2rem;
+	margin-bottom: 1rem;
+	border-bottom: 2px solid darken($color-blue, 10%);
+}
+
+.btn-logout {
+	background-color: rgba(white, 0.05);
+	border-bottom: 2px solid lighten(rgba($color-blue-steel, 0.9), 20%);
+	margin: 0;
+
+	&:hover {
+		background-color: rgba(white, 0.1);
+	}
+}
+
+.btn-form {
+	display: inline-block;
+	padding: 1.5rem 4.5rem;
+	background-color: lighten($color-blue, 10%);
+}
+
+.btn-remove {
+	width: 100%;
+	background-color: lightcoral;
+}

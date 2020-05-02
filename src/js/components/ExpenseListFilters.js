@@ -37,33 +37,44 @@ export class ExpenseListFilters extends React.Component {
 
 	render() {
 		return (
-			<div>
-				<input
-					type="text"
-					name="filter-text"
-					value={this.props.filters.text}
-					onChange={this.onTextChange}
-				/>
-				<select
-					name="sortby"
-					value={this.props.filters.sortBy}
-					onChange={this.onSortOptionChange}
-				>
-					<option value="date">Date</option>
-					<option value="amount">Amount</option>
-				</select>
-				<DateRangePicker
-					startDate={this.props.filters.startDate}
-					startDateId="0"
-					endDate={this.props.filters.endDate}
-					endDateId="1"
-					onDatesChange={this.onDatesChange}
-					focusedInput={this.state.calenderFocused}
-					onFocusChange={this.onFocusChange}
-					showClearDates={true}
-					isOutsideRange={() => false}
-					numberOfMonths={1}
-				/>
+			<div className="content-container">
+				<div className="input-group">
+					<div className="input-group__item">
+						<input
+							type="text"
+							name="filter-text"
+							value={this.props.filters.text}
+							onChange={this.onTextChange}
+							className="input-group__item--input"
+							placeholder="Search expenses here..."
+						/>
+					</div>
+					<div className="input-group__item">
+						<select
+							name="sortby"
+							value={this.props.filters.sortBy}
+							onChange={this.onSortOptionChange}
+							className="input-group__item--select"
+						>
+							<option value="date">Date</option>
+							<option value="amount">Amount</option>
+						</select>
+					</div>
+					<div className="input-group__item">
+						<DateRangePicker
+							startDate={this.props.filters.startDate}
+							startDateId="0"
+							endDate={this.props.filters.endDate}
+							endDateId="1"
+							onDatesChange={this.onDatesChange}
+							focusedInput={this.state.calenderFocused}
+							onFocusChange={this.onFocusChange}
+							showClearDates={true}
+							isOutsideRange={() => false}
+							numberOfMonths={1}
+						/>
+					</div>
+				</div>
 			</div>
 		);
 	}

@@ -1,8 +1,16 @@
 // => IMPORTS
 
 // -> base
-@import "./base/base";
-@import "./base/variables";
-
+@import './base/variables';
+@import './base/base';
 
 // -> components
+@import './comonents/box-layout';
+@import './comonents/buttons';
+@import './comonents/header';
+@import './comonents/content-container';
+@import './comonents/page-header';
+@import './comonents/input-group';
+@import './comonents/expense-list';
+@import './comonents/expense-form';
+@import './comonents/loader';

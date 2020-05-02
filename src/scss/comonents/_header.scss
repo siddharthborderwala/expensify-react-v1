@@ -1,0 +1,21 @@
+.header {
+	background-color: $color-blue-steel;
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		overflow: hidden;
+	}
+
+	&__heading {
+		&--link {
+			text-decoration: none;
+		}
+
+		&--text {
+			color: white;
+			margin: none;
+		}
+	}
+}
